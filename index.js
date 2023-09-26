@@ -1,58 +1,21 @@
 //import fetch from 'node-fetch';
-import axios from 'axios';
+import axios from "axios";
 
+// EMIAS ----------------------------------------------------------
 const url =
-  'https://www.mos.ru/api/doctor-record/v1/doctors?omsNumber%5B0%5D=7792289788001374&birthDate%5B0%5D=2017-07-11&specialityId=712&appointmentId%5B0%5D=464349210548';
+  "https://www.mos.ru/api/doctor-record/v1/doctors?appointmentId%5B0%5D=623811271098&omsNumber%5B0%5D=5050320833000938&birthDate%5B0%5D=1976-09-16";
 
 const cookie =
-  'ACS-SESSID=sotsaiejtif4lif6f8hubp5ktk; PHPSESSID=p17pcsuo658dtu6dl1iu5dvtkc; SL_GWPT_Show_Hide_tmp=1; SL_G_WPT_TO=ru; SL_wptGlobTipTmp=1; acst=dkAEyvMLsZMTxmA69ihvhKUQ6fbFztELCewYeei9Y4hhY2UyMjFmMi0zMDUwLTQ0MWMtOGIzOS04MjJiNWFhYmY1OWM; session-cookie=170406cea1a1c22bf54eb0b26940ac72e3859778e5e4523e1f81b5fb3c54f1c703682bce776bb94d6e2368006f9cdc32';
+  "session-cookie=17881263b3a749f91e76753ebeb261f582e42b4ee983b71ba7d9033d4a38ced3e3505933387288e80f5a1da8a9543d2f; mos_id=Cg+IA2URMQi4s0mVZX6RAgA=; SL_G_WPT_TO=ru; _ym_uid=1666790955427187628; _ym_d=1695625479; tmr_lvid=99a5d9aa663bf9021703aa9a0b142bc3; tmr_lvidTS=1695625478945; ACS-SESSID=8o2l182f5h867itlpbgi9bk0k3; SL_GWPT_Show_Hide_tmp=1; SL_wptGlobTipTmp=1; das_d_tag2=3bce4b6b-d889-4582-81b7-1a8c8bbdf092; das_d_tag2_legacy=3bce4b6b-d889-4582-81b7-1a8c8bbdf092; ghur=h894JTEOazI2yeOtcI2dp97Ecb1wZ0XaiVJCkt6oWPc|; sbp_sid=000000000000000000000000000000000000; at=1; oxxfghcd=1255933c-db75-4b8d-9998-c7ccff6e7023#3#2592000000#5000#600000#81540; oxxfghcd_legacy=1255933c-db75-4b8d-9998-c7ccff6e7023#3#2592000000#5000#600000#81540; oxxfgh=1255933c-db75-4b8d-9998-c7ccff6e7023%233%232592000000%235000%23600000%2381540; uwyii=b68022d4-09d1-2280-9d37-c24219c727d7; _ym_isad=2; Ltpatoken2=DCGMArNSYe3ZjtYgIi8KEcUL5Vh4rqFrmN+PpcXUdAUbzZIlECKCCspERVc+7NOokVul2xBNzisv1fE0Wr2UW35CFDx7H3uWjn3XkVV7auwoLzbnakLigmXJfdFqPa5VofATuudLqpucWxMOpH0jOLrhYR/jAYhRmAq5PcrWWhFslz7mhbF6lZwOqG9+6Qykober4oT61FjFbUetj7hKFchZl5X7sPZB/2E25QXv1s55A0Gb5nq32ydEteb4xsmVgeyaKxcnUP4aGxTA66EFCnlP1fyJnHne7CXusaq3eBKraRlcR9KEG08aAjZFZUskFg/8TgrOZyCnxqdxO5WhBw==; tmr_detect=0%7C1695710657302; acst=tP_NIF94kLubiO98ES0r1dfhGPbM_qJxVnQMqobHIwYzOTlkMGM4OS1jMjEwLTQ4NzktYjNlNS0xMDk2NGNkZTk1YWM";
 let i = 1;
 
 var config = {
-  method: 'get',
+  method: "get",
   url: url,
   headers: {
     Cookie: cookie,
   },
 };
-
-// axios(config)
-//   .then(function (response) {
-//     const { list } = response.data.data;
-//     list.map((item) => {
-//       item.complex_resource.length
-//         ? console.log(item.name, item.complex_resource)
-//         : console.log(item.name, ` - no data!`);
-//     });
-//     let now = new Date();
-//     console.log(now);
-//     console.log(`_____________ 0 __________________`);
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   });
-
-// setInterval(() => {
-//   axios(config)
-//     .then(function (response) {
-//       const { list } = response.data.data;
-//       list.map((item) => {
-//         item.complex_resource.length
-//           ? console.log(item.name, item.complex_resource)
-//           : console.log(item.name, ` - no data!`);
-//       });
-//       let now = new Date();
-//       console.log(now);
-//       console.log(`_____________ ${i++} __________________`);
-//     })
-//     .catch(function (error) {
-//       console.log(error);
-//     });
-// }, 150000);
-
-//-------------------------------------------------
-//-------------------------------------------------
-//-------------------------------------------------
 
 axios(config)
   .then(function (response) {
@@ -87,7 +50,6 @@ setInterval(() => {
       console.log(error);
     });
 }, 60000);
-
 
 // RZD ----------------------------
 
